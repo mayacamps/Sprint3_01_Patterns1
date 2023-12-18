@@ -13,6 +13,10 @@ public enum Undo {
         commands = new ArrayList<>();
     }
 
+    public Undo getInstance(){
+        return INSTANCE;
+    }
+
     public void addCommand(Scanner entry){
         System.out.println("Introduce the command you want to add: ");
         String command = entry.nextLine();

@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class Main {
     static Scanner entry = new Scanner(System.in);
-    static Undo undo = Undo.INSTANCE;
 
     public static void main(String[] args) {
+        Undo undo = Undo.INSTANCE;
         boolean exit = false;
         do {
             switch (menu()) {
@@ -22,7 +22,6 @@ public class Main {
             }
         } while (!exit);
     }
-
     private static int menu() {
        return readInt("Command option menu:" +
                "\n1. Add command" +
